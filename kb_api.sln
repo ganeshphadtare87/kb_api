@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kb_api", "kb_api\kb_api.csproj", "{E095C74E-F633-404A-9A2E-DE0336586FE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "kb_api", "kb_api\kb_api.csproj", "{E095C74E-F633-404A-9A2E-DE0336586FE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kb_bll", "kb_bll\kb_bll.csproj", "{CED7BA87-9B9F-48CF-AD39-BE2B89260E1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E095C74E-F633-404A-9A2E-DE0336586FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E095C74E-F633-404A-9A2E-DE0336586FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E095C74E-F633-404A-9A2E-DE0336586FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CED7BA87-9B9F-48CF-AD39-BE2B89260E1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CED7BA87-9B9F-48CF-AD39-BE2B89260E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CED7BA87-9B9F-48CF-AD39-BE2B89260E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CED7BA87-9B9F-48CF-AD39-BE2B89260E1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
