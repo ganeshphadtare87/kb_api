@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using kb_api.App_Config;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,8 +26,8 @@ namespace kb_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.Add(new ServiceDescriptor(typeof(ILog), new MyConsoleLogger()));
             services.AddControllers();
+            DependancyInjection.Register(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +37,8 @@ namespace kb_api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            AppSettingManager.Register(Configuration);
 
             app.UseHttpsRedirection();
 

@@ -139,6 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Common\AppSettings.cs" />
     <Compile Include="Models\Advertise.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryCar.cs" />
