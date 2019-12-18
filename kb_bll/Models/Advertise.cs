@@ -7,7 +7,6 @@ namespace kb_bll.Models
     {
         public Advertise()
         {
-            CategoryCar = new HashSet<CategoryCar>();
             CategoryProperty = new HashSet<CategoryProperty>();
         }
 
@@ -16,9 +15,11 @@ namespace kb_bll.Models
         public string Description { get; set; }
         public int CategoryId { get; set; }
         public decimal Price { get; set; }
+        public int LocationId { get; set; }
+        public DateTime? DatePosted { get; set; }
 
         public virtual Category Category { get; set; }
-        public virtual ICollection<CategoryCar> CategoryCar { get; set; }
+        public virtual Location Location { get; set; }
         public virtual ICollection<CategoryProperty> CategoryProperty { get; set; }
     }
 }

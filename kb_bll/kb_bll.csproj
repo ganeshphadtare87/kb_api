@@ -144,6 +144,7 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryCar.cs" />
     <Compile Include="Models\CategoryProperty.cs" />
+    <Compile Include="Models\Fuel.cs" />
     <Compile Include="Models\Images.cs" />
     <Compile Include="Models\KharidoBechoContext.cs" />
     <Compile Include="Models\Location.cs" />
@@ -153,6 +154,7 @@
     <Compile Include="Services\ICategoryService.cs" />
     <Compile Include="Services\ILocationService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\PostAdService.cs" />
     <Compile Include="ViewModels\CategoryVM.cs" />
     <Compile Include="ViewModels\LocationVM.cs" />
   </ItemGroup>
