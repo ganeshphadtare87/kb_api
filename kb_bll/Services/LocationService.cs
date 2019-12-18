@@ -18,10 +18,14 @@ namespace kb_bll.Services
                                 select l).ToList();
 
             List<LocationVM> locList = new List<LocationVM>();
-            //foreach (var loc in locationList) {
-
-            //    locList.Add(loc);
-            //}
+            foreach (var loc in locationList)
+            {
+                LocationVM location = new LocationVM();
+                location.LocationId = loc.LocationId;
+                location.LocatioName = loc.LocationName;
+                location.Type = loc.Type;
+                locList.Add(location);
+            }
 
             return locList;
         }
