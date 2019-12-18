@@ -150,10 +150,13 @@
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\UserDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AdvertiseService.cs" />
     <Compile Include="Services\CategoryService.cs" />
+    <Compile Include="Services\IAdvertiseService.cs" />
     <Compile Include="Services\ICategoryService.cs" />
     <Compile Include="Services\ILocationService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="ViewModels\AdvertiseVM.cs" />
     <Compile Include="Services\PostAdService.cs" />
     <Compile Include="ViewModels\CategoryVM.cs" />
     <Compile Include="ViewModels\LocationVM.cs" />
