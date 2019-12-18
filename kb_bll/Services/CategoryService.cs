@@ -16,6 +16,7 @@ namespace kb_bll.Services
         {
             var categoryList = (from c in db.Category
                                 select c).ToList();
+            
 
             List<CategoryVM> catList = new List<CategoryVM>();
 
