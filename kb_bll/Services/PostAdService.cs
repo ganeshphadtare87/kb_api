@@ -1,4 +1,5 @@
 ﻿using kb_bll.Models;
+using kb_bll.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +13,16 @@ namespace kb_bll.Services
     {
         KharidoBechoContext db = new KharidoBechoContext();
 
-        public int PostCarAd(CategoryCar newCar)
+        public int PostCarAd(CategoryCarVM newCar)
         {
             //db.Advertise.FromSql("dbo.sp_PostAdCar", parameters: new[] { newAd.Title, newAd.Description, 
             //newAd.CategoryId, newAd.Price, newAd.LocationId, newCar.Brand, newCar.Year, newCar.Fuel, newCar.Kmdriven });
             var newCarAd = new Advertise()
             {
-                Title = newCar.Title, Description = newCar.Description, CategoryId = newCar.CategoryId, Price = newCar.Price,
-                LocationId = newCar.LocationId
-
+                Title = newCar.Title, Description = newCar.Description, CategoryId = newCar.CategoryId, 
+                Price = Convert.ToDecimal(newCar.Price),LocationId = newCar.LocationId
             };
-            
+
             db.Advertise.Add(newCarAd);
             db.SaveChanges();
             int newAdID = newCarAd.AdvId;
@@ -38,14 +38,14 @@ namespace kb_bll.Services
             return newCarAdCat.Id;
         }
 
-        public int PostPropertyAd(CategoryProperty newProp)
+        public int PostPropertyAd(CategoryPropertyVM newProp)
         {
             var newPropAd = new Advertise()
             {
                 Title = newProp.Title,
                 Description = newProp.Description,
                 CategoryId = newProp.CategoryId,
-                Price = newProp.Price,
+                Price = Convert.ToDecimal(newProp.Price),
                 LocationId = newProp.LocationId
 
             };

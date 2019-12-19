@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace kb_bll.Models
+namespace kb_bll.ViewModels
 {
-  
-    public partial class CategoryCar 
+    public class CategoryCarVM : AdvertiseVM
     {
         public int Id { get; set; }
-        public int AdvId { get; set; }
+        public new int AdvId { get; set; }
         public string Brand { get; set; }
         public int Year { get; set; }
         public int Fuel { get; set; }
         public int Kmdriven { get; set; }
-        public string Description { get; set; }
+        public new string Description { get; set; }
     }
 }
