@@ -45,6 +45,8 @@ namespace kb_api
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            app.UseCors(builder => builder.AllowAnyOrigin());
 
             app.UseEndpoints(endpoints =>
             {
