@@ -49,14 +49,14 @@ namespace kb_bll.Services
                                 cc.Kmdriven.ToString().Contains(SearchText) ||
                                 cc.Year.ToString().Contains(SearchText) ||
                                 cap.Type.Contains(SearchText)
-                          select ad).ToList();
+                           select ad).ToList();
 
-       
-            foreach (var ad in results)
-            {
-                lstAd.Add(new AdvertiseVM{ AdvId = ad.AdvId, Description = ad.Description, Price = Convert.ToDouble(ad.Price), DatePosted= Convert.ToDateTime(ad.DatePosted), Title = ad.Title});
-         
-            }
+
+            //foreach (var ad in results)
+            //{
+            //    lstAd.Add(new AdvertiseVM{ AdvId = ad.AdvId, Description = ad.Description, Price = Convert.ToDouble(ad.Price), DatePosted= Convert.ToDateTime(ad.DatePosted), Title = ad.Title});
+
+            //}
 
             //var searchText = new SqlParameter("@SearchText", SearchText);
             ////var AdList = db.Database.ExecuteSqlCommand($"SP_SearchAdvertise @SearchText", searchText);
