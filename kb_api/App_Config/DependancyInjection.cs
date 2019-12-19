@@ -17,9 +17,10 @@ namespace kb_api.App_Config
         public static void RegisterServices(IServiceCollection services)
         {
             //services.Add(new ServiceDescriptor(typeof(ILog), new MyConsoleLogger()));
-            services.Add(new ServiceDescriptor(typeof(ILocationService), typeof(LocationService)));
-            services.Add(new ServiceDescriptor(typeof(ICategoryService), typeof(CategoryService)));
-            services.Add(new ServiceDescriptor(typeof(IAdvertiseService), typeof(AdvertiseService)));
+
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<IAdvertiseService, AdvertiseService>();
+            services.AddTransient<ILocationService, LocationService>();
         }
     }
 }
