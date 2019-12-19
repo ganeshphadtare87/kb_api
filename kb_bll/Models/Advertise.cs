@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kb_bll.Models
 {
+    
     public partial class Advertise
     {
         public Advertise()

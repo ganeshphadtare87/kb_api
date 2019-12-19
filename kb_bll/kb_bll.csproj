@@ -158,6 +158,8 @@
     <Compile Include="Services\LocationService.cs" />
     <Compile Include="ViewModels\AdvertiseVM.cs" />
     <Compile Include="Services\PostAdService.cs" />
+    <Compile Include="ViewModels\CategoryCarVM.cs" />
+    <Compile Include="ViewModels\CategoryPropertyVM.cs" />
     <Compile Include="ViewModels\CategoryVM.cs" />
     <Compile Include="ViewModels\LocationVM.cs" />
   </ItemGroup>
