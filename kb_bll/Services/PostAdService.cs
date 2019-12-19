@@ -12,14 +12,14 @@ namespace kb_bll.Services
     {
         KharidoBechoContext db = new KharidoBechoContext();
 
-        public int PostCarAd(Advertise newAd, CategoryCar newCar)
+        public int PostCarAd(CategoryCar newCar)
         {
             //db.Advertise.FromSql("dbo.sp_PostAdCar", parameters: new[] { newAd.Title, newAd.Description, 
             //newAd.CategoryId, newAd.Price, newAd.LocationId, newCar.Brand, newCar.Year, newCar.Fuel, newCar.Kmdriven });
             var newCarAd = new Advertise()
             {
-                Title = newAd.Title, Description = newAd.Description, CategoryId = newAd.CategoryId, Price = newAd.Price,
-                LocationId = newAd.LocationId
+                Title = newCar.Title, Description = newCar.Description, CategoryId = newCar.CategoryId, Price = newCar.Price,
+                LocationId = newCar.LocationId
 
             };
             
@@ -38,15 +38,15 @@ namespace kb_bll.Services
             return newCarAdCat.Id;
         }
 
-        public int PostPropertyAd(Advertise newAd, CategoryProperty newProp)
+        public int PostPropertyAd(CategoryProperty newProp)
         {
             var newPropAd = new Advertise()
             {
-                Title = newAd.Title,
-                Description = newAd.Description,
-                CategoryId = newAd.CategoryId,
-                Price = newAd.Price,
-                LocationId = newAd.LocationId
+                Title = newProp.Title,
+                Description = newProp.Description,
+                CategoryId = newProp.CategoryId,
+                Price = newProp.Price,
+                LocationId = newProp.LocationId
 
             };
 

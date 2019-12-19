@@ -15,18 +15,16 @@ namespace kb_api.Controllers
     {
         PostAdService postAdModel = new PostAdService();
 
-        [HttpPost]
-        [ActionName("postadcar")]
-        public int PostAdCar(Advertise objAd, CategoryCar objCarCat)
+        [HttpPost("postadcar")]
+        public int PostAdCar(CategoryCar objCarCat)
         {
-            return postAdModel.PostCarAd(objAd, objCarCat);
+            return postAdModel.PostCarAd(objCarCat);
         }
 
-        [HttpPost]
-        [ActionName("postadproperty")]
-        public int PostAdProperty(Advertise objAd, CategoryProperty objPropCat)
+        [HttpPost("postadproperty")]
+        public int PostAdProperty(CategoryProperty objPropCat)
         {
-            return postAdModel.PostPropertyAd(objAd, objPropCat);
+            return postAdModel.PostPropertyAd(objPropCat);
         }
     }
 }
