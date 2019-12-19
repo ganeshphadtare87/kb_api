@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kb_bll.Models
 {
-    public partial class CategoryProperty
+    [NotMapped]
+    public partial class CategoryProperty : Advertise
     {
         public int Id { get; set; }
-        public int AdvId { get; set; }
+        //public int AdvId { get; set; }
         public string Type { get; set; }
         public int? Bedrooms { get; set; }
         public int? Bathrooms { get; set; }
