@@ -12,11 +12,16 @@ namespace kb_api.Controllers
     [Route("[controller]")]
     public class AdvertiseController : Controller
     {
+        IAdvertiseService advertiseService;
+        public AdvertiseController(IAdvertiseService advertiseService) {
+            this.advertiseService = advertiseService;
+        }
+
         [HttpGet("SearchAdvertise")]
         public List<AdvertiseVM> SearchAdvertise(string SearchText)
         {
-            AdvertiseService adService = new AdvertiseService();
-            return adService.SearchAdvertise(SearchText);
+          
+            return this.advertiseService.SearchAdvertise(SearchText);
 
          }
     }

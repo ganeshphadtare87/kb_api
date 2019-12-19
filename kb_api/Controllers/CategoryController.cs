@@ -13,12 +13,14 @@ namespace kb_api.Controllers
     [Route("[controller]")]
     public class CategoryController : Controller
     {
+        ICategoryService categoryService;
+        public CategoryController(ICategoryService categoryService) {
+            this.categoryService = categoryService;
+        }
         [HttpGet("getcategories")]
         public List<CategoryVM> GetCategories()
         {
-            CategoryService catService = new CategoryService();
-
-            return catService.GetCategories();
+            return this.categoryService.GetCategories();
         }
     }
 }
