@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kb_bll.Models
 {
-    
     public partial class Advertise
     {
         public Advertise()
         {
             CategoryProperty = new HashSet<CategoryProperty>();
+            Images = new HashSet<Images>();
         }
 
         public int AdvId { get; set; }
@@ -23,5 +22,6 @@ namespace kb_bll.Models
         public virtual Category Category { get; set; }
         public virtual Location Location { get; set; }
         public virtual ICollection<CategoryProperty> CategoryProperty { get; set; }
+        public virtual ICollection<Images> Images { get; set; }
     }
 }
