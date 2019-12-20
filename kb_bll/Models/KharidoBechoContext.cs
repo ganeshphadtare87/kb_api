@@ -1,4 +1,5 @@
 ﻿using System;
+using kb_bll.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -29,7 +30,7 @@ namespace kb_bll.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=INFAR50351;Initial Catalog=KharidoBecho;User ID=sa;Password=Newuser123");
+                optionsBuilder.UseSqlServer(AppSettings.GetConnectionString);
             }
         }
 
@@ -135,12 +136,16 @@ namespace kb_bll.Models
 
             modelBuilder.Entity<Images>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.Property(e => e.ImageUrl)
                     .IsRequired()
                     .HasMaxLength(500)
                     .IsUnicode(false);
+
+                entity.HasOne(d => d.Adv)
+                    .WithMany(p => p.Images)
+                    .HasForeignKey(d => d.AdvId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Images_Advertise");
             });
 
             modelBuilder.Entity<Location>(entity =>

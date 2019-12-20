@@ -10,8 +10,8 @@ namespace kb_bll.Services
 {
     public interface IAdvertiseService
     {
-        List<AdvertiseVM> SearchAdvertise(string SearchText);
+        List<AdvertiseTileVM> SearchAdvertise(string SearchText);
 
-        List<AdvertiseVM> GetAdvertise();
+        List<AdvertiseTileVM> GetAllAdvertises();
     }
 }

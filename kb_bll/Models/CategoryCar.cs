@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kb_bll.Models
 {
-  
-    public partial class CategoryCar 
+    public partial class CategoryCar
     {
         public int Id { get; set; }
         public int AdvId { get; set; }

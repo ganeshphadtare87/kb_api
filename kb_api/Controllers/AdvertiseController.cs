@@ -17,12 +17,20 @@ namespace kb_api.Controllers
             this.advertiseService = advertiseService;
         }
 
-        [HttpGet("SearchAdvertise")]
-        public List<AdvertiseVM> SearchAdvertise(string SearchText)
+        [HttpGet("searchadvertise")]
+        public List<AdvertiseTileVM> SearchAdvertise(string SearchText)
         {
           
             return this.advertiseService.SearchAdvertise(SearchText);
 
          }
+
+        [HttpGet("getalladvertises")]
+        public List<AdvertiseTileVM> GetAllAdvertises()
+        {
+
+            return this.advertiseService.GetAllAdvertises();
+
+        }
     }
 }
